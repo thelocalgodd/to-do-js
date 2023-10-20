@@ -6,13 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addTaskButton.addEventListener("click", function () {
         const taskText = taskInput.value.trim();
         if (taskText) {
-            document.getElementById('placeholder').remove()
             const listItem = document.createElement("li");
             listItem.innerHTML = `
                 <span>${taskText}</span>
                 <button class="delete">delete</button>
             `;
-
+            
             taskList.appendChild(listItem);
             taskInput.value = "";
 
